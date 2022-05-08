@@ -1,4 +1,5 @@
-import 'package:elearning_mobile_app/onboarding.dart';
+import 'package:elearning_mobile_app/pages/login_page.dart';
+import 'package:elearning_mobile_app/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Onboarding(),
+      routes: {
+        '/' :(context) => Onboarding(),
+        '/login_page' :(context) => LoginPage(),
+      },
     );
   }
 }
