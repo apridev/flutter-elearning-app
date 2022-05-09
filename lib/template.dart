@@ -6,6 +6,7 @@ double defaultMargin = 30;
 Color primaryColor = Color(0xff4483EB);
 Color blackColor = Color(0xff171717);
 Color backgroundColor = Color(0xffffffff);
+Color inputForm = Color(0xffD1D1D1);
 Color subtitelColor = Color(0xff8D8D8D);
 
 TextStyle primaryTextStyle = GoogleFonts.montserrat(
@@ -18,6 +19,14 @@ TextStyle subtitleTextStyle = GoogleFonts.montserrat(
 
 TextStyle whiteTextStyle = GoogleFonts.montserrat(
   color: backgroundColor
+);
+
+TextStyle inputFormStyle = GoogleFonts.montserrat(
+  color: inputForm
+);
+
+TextStyle blueTextPrimary = GoogleFonts.montserrat(
+  color: primaryColor
 );
 
 FontWeight reguler = FontWeight.w400;
