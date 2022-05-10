@@ -90,21 +90,18 @@ int _currentIndex = 0;
             color: searchBorderColor
           ),
         ),
-        child: TextFormField(
-          keyboardType: TextInputType.multiline,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: 18,
-              vertical: 18
-            ),
-            hintText: 'Search for learning',
-            hintStyle: inputFormStyle.copyWith(
-              fontSize: 14
-            ),
-            prefixIcon: Icon(Icons.search, color: inputForm,)
-          ),
-        ),
+        child: TextField(
+  textInputAction: TextInputAction.search,
+  onSubmitted: (value) {
+    print("search");
+  },
+  decoration: InputDecoration(
+    border: InputBorder.none,
+    prefixIcon: Icon(Icons.search, size: 20,),
+    hintText: 'Search ',
+    contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+  ),
+),
       );
     }
 
