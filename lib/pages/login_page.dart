@@ -228,7 +228,9 @@ class _LoginPageState extends State<LoginPage> {
           color: primaryColor
         ),
         child: TextButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, '/home_page', (route) => false);
+          },
           child: Text('Login', style: whiteTextStyle.copyWith(
             fontSize: 14,
             fontWeight: medium
@@ -255,10 +257,15 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               width: 4,
             ),
-            Text('Register', style: blueTextPrimary.copyWith(
-              fontSize: 12,
-              fontWeight: semiBold
-            ),)
+            GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, '/register_page');
+              },
+              child: Text('Register', style: blueTextPrimary.copyWith(
+                fontSize: 12,
+                fontWeight: semiBold
+              ),),
+            )
           ],
         ),
       );
